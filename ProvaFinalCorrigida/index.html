@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body  id="inicio">
+    <header>
+        <nav>
+            <ul>
+                <a href="#inicio"><li>Home</li></a>
+                <a href="#portfolio"><li>Porfolio</li></a>
+                <a href="#orcamento"><li>Orçamento</li></a>
+                <a href="#comentarios"><li>Comentarios</li></a>
+                <a href="#login" id="btnLogin"><li><i class="fa fa-user"></i> &nbsp;Admin</li></a>
+            </ul>
+        </nav>
+    </header>
+<main>
+    <section class="slideshow">
+        <div class="slides">
+            <div class="slide">
+                <img src="./img/imagem1.jpg" alt="Imagem 1">
+                <div class="texto">
+                    <h2>Texto</h2>
+                    <P>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, asperiores veritatis dicta non placeat ducimus perspiciatis rem, qui doloribus explicabo ipsam omnis fugit, voluptas tenetur at facere officiis velit illum.
+                    </P>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="./img/imagem2.jpg" alt="Imagem 2">
+                    <div class="texto">
+                        <h2>Texto</h2>
+                        <P>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, asperiores veritatis dicta non placeat ducimus perspiciatis rem, qui doloribus explicabo ipsam omnis fugit, voluptas tenetur at facere officiis velit illum.
+                        </P>
+                    </div>
+            </div>
+            <div class="slide">
+                <img src="./img/imagem3.jpg" alt="Imagem 3">
+                    <div class="texto">
+                        <h2>Texto</h2>
+                        <P>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, asperiores veritatis dicta non placeat ducimus perspiciatis rem, qui doloribus explicabo ipsam omnis fugit, voluptas tenetur at facere officiis velit illum.
+                        </P>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <h2>Galeria de Fotos</h2>
+        <div class="gallery">
+            <img src="./img/img1.jpg" alt="Foto 1">
+            <img src="./img/img2.jpg" alt="Foto 2">
+            <img src="./img/img3.jpg" alt="Foto 3">
+            <img src="./img/img3.jpg" alt="Foto 3">
+            <img src="./img/img1.jpg" alt="Foto 1">
+            <img src="./img/img2.jpg" alt="Foto 2">
+            <img src="./img/img2.jpg" alt="Foto 2">
+            <img src="./img/img3.jpg" alt="Foto 3">
+            <img src="./img/img1.jpg" alt="Foto 1">
+        </div>
+    </section>
+    <section id="orcamento">
+        <h2>Orçamento</h2>
+        <form onsubmit="enviarOrcamento()">
+            <input type="text" name="nome" id="nome" placeholder="Seu Nome">
+            <input type="text" name="email" id="email" placeholder="Seu E-mail">
+            <input type="text" name="tel" id="tel" placeholder="Seu Telefone">
+            <input type="text" name="duracao" id="duracao" placeholder="Duração do evento (em horas)">
+            <input type="text" name="local" id="local" placeholder="Local do Evento">
+            <select name="tipo" id="tipo" class="flex-300">
+                <option selected disabled>Tipo do Evento</option>
+                <option value="interno">Insterno</option>
+                <option value="externo">Externo</option>
+                <option value="internoExterno">Interno e Externo</option>
+            </select>
+            <select name="fotosImpressas" id="fotosImpressas" class="flex-300">
+                <option selected disabled>Fotos Impressas</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+            <input type="text" name="qtdFotos" id="qtdFotos">
+            <textarea name="detalhes" id="detalhes" cols="30" rows="10"></textarea>
+            <button type="submit">Enviar Solicitação</button>
+        </form>
+    </section>
+    <section id="comentarios">
+        <h2>Comentarios</h2>
+        <div class="comentario">
+            <img src="./img/pacman_v1.jpg" alt="Pessoa 1">
+            <div class="textoComentario">
+                <h3>João Silva</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit a voluptas optio molestias dolores officiis inventore. Ex minima temporibus quo quae reprehenderit ut corrupti dicta ad veniam, consequuntur, id distinctio!</p>
+            </div>
+        </div>
+        <div class="comentario">
+            <img src="./img/pacman_v2.jpg" alt="Pessoa 2">
+            <div class="textoComentario">
+                <h3>Maria Oliveira</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eius ullam voluptas nobis odit quidem sequi earum officia corporis id, suscipit saepe quibusdam officiis quasi voluptate placeat accusamus! Soluta, nobis?</p>
+            </div>
+        </div>
+        <div class="comentario">
+            <img src="./img/pacman_v3.jpg" alt="Pessoa 3">
+            <div class="textoComentario">
+                <h3>Pedro Santos</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, aspernatur? Non quo facilis sint consectetur laborum, cupiditate animi reprehenderit dolorem reiciendis commodi deserunt doloribus eius libero illo neque nisi aliquam.</p>
+            </div>
+        </div>
+        <div class="comentario">
+            <img src="./img/pacman_v1.jpg" alt="Pessoa 1">
+            <div class="textoComentario">
+                <h3>João Silva</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit a voluptas optio molestias dolores officiis inventore. Ex minima temporibus quo quae reprehenderit ut corrupti dicta ad veniam, consequuntur, id distinctio!</p>
+            </div>
+        </div>
+        <div class="comentario">
+            <img src="./img/pacman_v2.jpg" alt="Pessoa 2">
+            <div class="textoComentario">
+                <h3>Maria Oliveira</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eius ullam voluptas nobis odit quidem sequi earum officia corporis id, suscipit saepe quibusdam officiis quasi voluptate placeat accusamus! Soluta, nobis?</p>
+            </div>
+        </div>
+        <div class="comentario">
+            <img src="./img/pacman_v3.jpg" alt="Pessoa 3">
+            <div class="textoComentario">
+                <h3>Pedro Santos</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit a voluptas optio molestias dolores officiis inventore. Ex minima temporibus quo quae reprehenderit ut corrupti dicta ad veniam, consequuntur, id distinctio!</p>
+            </div>
+        </div>
+    </section>
+    <dialog id="login">
+        <form>
+            <h2 class="flex-p100">Login</h2>
+                <label class="flex-p20" for="usuario"> Usuario:</label>
+                <input class="flex-p70" type="text" name="usuario" id="usuario">
+                <label class="flex-p20" for="senha"> Senha: </label>
+                <input class="flex-p70" type="password" name="senha" id="senha">
+                <button type="button" id="btnFechar">Sair</button>
+                <button type="button" onclick="logar()">Entrar</button>
+        </form>
+    </dialog>
+</main>
+<footer>
+    <p>&copy;2023 -  Prova de Web Básico</p>
+    <p>Boa sorte!!!</p>
+</footer>
+<script src="./script.js"></script>
+</body>
+</html>

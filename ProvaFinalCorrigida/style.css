@@ -1,0 +1,279 @@
+/* Geral */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #555;
+    padding-top: 40px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: #333;
+    text-align: center;
+    margin: 30px;
+    padding: 0;
+}
+
+form{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+input, select, textarea {
+    flex-grow: 1;
+    flex-basis: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+textarea{
+    flex-basis: 100%;
+    min-height: 100px;
+}
+
+.flex-800{ flex-basis: 800px; }
+
+.flex-300{ flex-basis: 300px; }
+
+.flex-p100{ flex-basis: 100%; }
+
+.flex-p70{ flex-basis: 70%; }
+
+.flex-p20{ flex-basis: 20%; }
+
+button {
+    flex-grow: 1;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+button:hover { background-color: #0056b3; }
+
+button[type="reset"]{ background-color: #f5b049; }
+
+button[type="reset"]:hover{ background-color: #ac7727; }
+/*Fim Geral*/
+/* Início Menu */
+nav ul{
+    display: flex;
+    background-color: #111;
+    background-image: linear-gradient(to bottom, #000, #222);
+    margin: 0;
+    border-bottom: 1px solid #000;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 9999;
+}
+
+ul a li{
+    display: inline-block;
+    color: #fff;
+    padding: 15px 20px;
+    transition: padding 0.2s ease-in-out;
+}
+
+ul a li:hover{
+    background-image: linear-gradient(to top, #000, #222);
+}
+
+ul a:last-child{
+    margin-left: auto;
+}
+
+ul a li.shrink{
+    padding: 8px 20px;
+}
+/* Fim Menu */
+/* Início Slideshow */
+.slideshow {
+    overflow: hidden; /*Oculta o que não estiver sendo visto*/
+    width: 100%;
+    margin: 0 auto;
+}
+
+.slides {
+    display: flex;
+}
+
+.slide {
+    flex-basis: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    animation: slide 15s infinite ease-in-out;
+}
+
+@keyframes slide{
+     0%{left: 0px}
+    20%{left: 0px}
+    30%{left: -100%}
+    50%{left: -100%}
+    60%{left: -200%}
+    90%{left: -200%}
+    100%{left: 0px}
+}
+
+.slideshow img {
+    width: 100%;
+}
+
+.texto{
+    position: absolute;
+    top: 50%;    
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    width: 60%;
+    min-width: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 20px;
+}
+.texto h2{
+    color: #FFF;
+    text-align: start;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+/* Fim Slideshow */
+/* Início Porfolio */
+#portfolio {
+    max-width: 80%;
+    margin: 0px auto;
+    background-color: #fff;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border: 3px solid #ddd;
+    transition: transform 0.5s, box-shadow 0.5s, border 0.5s;
+}
+
+.gallery img:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+    border: 3px solid #FFF;
+}
+/*Fim Portfolio*/
+/* Início Orçamento */
+#orcamento {
+    max-width: 80%;
+    background-color: #eee;
+    margin: 40px auto;
+    padding: 20px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+#orcamento h2{
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+/* Fim Orçamento*/
+/* Início Comentários */
+#comentarios {
+    max-width: 100%;
+    background-color: #f5f5f5;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    padding: 10px 40px;
+    display: flex ; /* Parte da avaliação de CSS */ 
+    flex-wrap: wrap; /* Parte da avaliação de CSS */ 
+    justify-content:space-evenly ; /* Parte da avaliação de CSS */     
+}
+#comentarios h2{ width: 100%;}
+
+.comentario{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    flex-basis: 300px;
+    margin: 20px;
+    text-align: center;
+}
+
+.comentario img{
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.textoComentario{
+    padding: 10px;
+    text-align: justify;
+}
+
+/** 
+ * 
+ * Avaliação: CSS seção de comentários
+ * 
+ **/
+
+
+/* Fim Comentários */
+/* início Modal*/
+dialog{
+    width: 40%;
+    min-width: 300px;
+    padding: 0px 30px 20px 30px;
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#btnFechar{ background-color: #f5b049; }
+
+#btnFechar:hover{ background-color: #ac7727; }
+
+dialog button{ margin-top: 20px;}
+
+dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+dialog label.erro{
+    display: inline-block;
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgb(255, 190, 190);
+    color: rgb(86, 2, 2);
+    text-align: center;
+}
+/* Fim Modal*/
+/* Início Footer*/
+footer{
+    background-color: #222;
+    color: #ccc;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+footer p{ margin: 5px; }
+
+footer p:nth-child(2){ color: rgb(214, 204, 9);}
+/* Fim Footer */
